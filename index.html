@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +7,22 @@
   <!-- Add description and keywords meta tags -->
   <meta name="description" content="Frontend Developer & UI/UX Designer Portfolio - Babatunde Adewale Agboke" />
   <meta name="keywords" content="frontend developer, UI/UX designer, web development, React, Angular, TypeScript" />
+  <meta http-equiv="Cache-Control" content="max-age=31536000" />
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./Image/Hero-image/IMG-4465 2.png" as="image" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    as="style" />
+
   <!-- Fix script loading -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+
   <!-- Existing links -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -67,7 +80,8 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="./Image/Hero-image/IMG-4465 2.png" alt="Babatunde Agboke - Web Developer" loading="eager" />
+        <img src="./Image/Hero-image/IMG-4465 2.png" alt="Babatunde Agboke - Web Developer" loading="eager"
+          fetchpriority="high" decoding="async" />
       </div>
     </div>
     <div class="social-links-vertical">
@@ -390,7 +404,8 @@
       <!-- Car Rental Platform -->
       <div class="project-card" data-aos="fade-up">
         <div class="project-image">
-          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Car Rental Platform" />
+          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Car Rental Platform" loading="lazy"
+            decoding="async" />
           <div class="project-links">
             <a href="https://car-rent.vercel.app" target="_blank" class="demo-link">
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -455,7 +470,8 @@
       <!-- E-Commerce Dashboard -->
       <div class="project-card" data-aos="fade-up">
         <div class="project-image">
-          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="E-Commerce Dashboard" />
+          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Car Rental Platform" loading="lazy"
+            decoding="async" /> 
           <div class="project-links">
             <a href="https://dashboard-demo.vercel.app" target="_blank" class="demo-link">
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -517,7 +533,8 @@
       <!-- Social Media Platform -->
       <div class="project-card" data-aos="fade-up">
         <div class="project-image">
-          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Social Media Platform" />
+          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Car Rental Platform" loading="lazy"
+            decoding="async" />
           <div class="project-links">
             <a href="https://social-demo.vercel.app" target="_blank" class="demo-link">
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -775,10 +792,9 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="module" src="3d-model.js"></script>
-  <script src="main.js"></script>
-  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script type="module" src="3d-model.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
