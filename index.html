@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+  <title>Balogram Portfolio</title>
+  <!-- Add description and keywords meta tags -->
+  <meta name="description" content="Frontend Developer & UI/UX Designer Portfolio - Babatunde Adewale Agboke" />
+  <meta name="keywords" content="frontend developer, UI/UX designer, web development, React, Angular, TypeScript" />
+  <meta http-equiv="Cache-Control" content="max-age=31536000" />
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./Image/Hero-image/IMG-4465 2.png" as="image" />
+  <link rel="preload" href="style.css" as="style" />
+
+  <!-- Fix script loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+
+  <!-- Existing links -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+            }
+        }
+        </script>
+  <script src="hero-animation.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="navbar.js" defer></script>
+  <script src="mobile-menu.js" defer></script>
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="style-fixes.css">
+  <link rel="stylesheet" href="mobile-menu.css">
+  <link rel="stylesheet" href="button-fix.css">
+  <link rel="stylesheet" href="image-adjustments.css">
+</head>
+
+<body>
+  <!-- Custom Cursor Element -->
+  <div class="cursor"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <h2>Balogram</h2>
+      <span>
+        <h4>Code & canvas</h4>
+      </span>
+    </a>
+  
+    <button class="menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  
+    <div class="nav-links">
+      <div class="nav-link">
+        <a class="link" href="#home">Home</a>
+        <a class="link" href="#overview">Overview</a>
+        <a class="link" href="#projects">Projects</a>
+        <a class="link" href="#contact">Contact</a>
+      </div>
+      <a href="./CV-doc/Babatunde_Adewale_Agboke_Frontend_CV.pdf" class="download-cv" download> Download CV </a>
+    </div>
+  </nav>
+  
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <img src="./Image/Hero-image/T98 BW.png" alt="Background" class="hero-bg-image" />
+      </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-intro" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="section-title">WEB DEVELOPER</h3>
+            <h1 class="glitch-text" data-text="Babatunde Agboke">Babatunde Agboke</h1>
+            <div class="typing-container">
+              <span class="typing-text">I'm a</span>
+              <span class="typed-text" id="typed"></span>
+            </div>
+            <p class="hero-subtitle">
+              Frontend Developer & UI/UX Designer based in Lagos, Nigeria.
+            </p>
+            <div class="hero-cta">
+              <a href="#contact" class="cta-primary" aria-label="Contact Me">
+                <span>Contact Me</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#projects" class="cta-secondary" aria-label="View Work">
+                <span>View Work</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="code-stats">
+          <div class="code-snap-container" data-aos="fade-up" data-aos-delay="200">
+            <img src="./Image/Hero-image/code.png" alt="Code Snippet" class="code-snap-image">
+          </div>
+          <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+              <span class="stat-number" data-target="5">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+              <span class="stat-number" data-target="50">50+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
+              <span class="stat-number" data-target="30">30+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+  <!-- Overview Section -->
+  <!-- ... existing code ... -->
+  <section id="overview" class="overview">
+    <div id="particles-js-overview"></div>
+    <div class="overview-header" data-aos="fade-up">
+      <h3 class="section-title">INTRODUCTION</h3>
+      <h2 class="overview-title">Overview</h2>
+      <p class="overview-text">
+        I'm a skilled Front-End Developer and UI/UX Designer passionate about
+        crafting responsive, high-performance web applications. With expertise
+        in HTML, CSS, JavaScript, TypeScript, and frameworks like React,
+        Next.js, and Angular, I build seamless, user-friendly interfaces that
+        elevate user experience. I specialize in translating business goals
+        and design concepts into interactive, scalable, and visually
+        compelling solutions**. A **quick learner and problem solver, I write
+        clean, efficient, and maintainable code, ensuring accessibility,
+        performance, and a flawless user journey.
+      </p>
+    </div>
+
+    <div class="skills-section">
+      <h3 class="section-subtitle" data-aos="fade-up">Technical Skills</h3>
+      <div class="cards-container primary-skills">
+        <div class="card" data-aos="fade-up">
+          <img src="./Icons/code refactoring.png" alt="Frontend Development" class="card-icon" />
+          <h3>Frontend<br />Developer</h3>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <img src="./Icons/icons8-ui-design-100.png" alt="UI/UX Designer" class="card-icon" />
+          <h3>UI/UX<br />Designer</h3>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <img src="./Icons/icons8-react.svg" alt="React Development" class="card-icon" />
+          <h3>React.js<br />Developer</h3>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <img src="./Icons/icons8-angular.svg" alt="Angular Development" class="card-icon" />
+          <h3>Angular<br />Developer</h3>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+          <img src="./Icons/icons8-typescript-100.png" alt="TypeScript Development" class="card-icon" />
+          <h3>TypeScript<br />Developer</h3>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="500">
+          <img src="./Icons/icons8-sass (1).svg" alt="SASS Development" class="card-icon" />
+          <h3>SCSS/SASS<br />Developer</h3>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle" data-aos="fade-up">Core Services</h3>
+      <div class="cards-container services">
+        <div class="card service-card" data-aos="fade-up">
+          <i class="fas fa-code"></i>
+          <h3>Frontend Development</h3>
+          <p>Building responsive and interactive interfaces</p>
+        </div>
+        <div class="card service-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-palette"></i>
+          <h3>UI/UX Design</h3>
+          <p>Creating user-centered designs with intuitive interactions</p>
+        </div>
+        <div class="card service-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-bezier-curve"></i>
+          <h3>Design Systems</h3>
+          <p>Developing scalable and consistent design systems</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- After Overview section -->
+  <section id="process" class="process">
+    <div class="process-header" data-aos="fade-up">
+      <h3 class="section-title">DEVELOPMENT APPROACH</h3>
+      <h2 class="process-title">My Process</h2>
+      <p class="process-description">
+        Crafting high-performance web applications with a focus on code
+        quality and user experience
+      </p>
+    </div>
+
+    <div class="process-flow">
+      <div class="process-step" data-aos="fade-right">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Planning & Architecture</h3>
+          <ul class="step-details">
+            <li>Tech Stack Selection (React/Angular/Vue)</li>
+            <li>Component Architecture Design</li>
+            <li>UI/UX Wireframing in Figma</li>
+          </ul>
+          <div class="tech-stack">
+            <i class="fab fa-react" title="React"></i>
+            <i class="fab fa-angular" title="Angular"></i>
+            <i class="fab fa-vuejs" title="Vue.js"></i>
+          </div>
+          <div class="step-metrics">
+            <span class="metric">⚡ 95% Architecture Win</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Development & Integration</h3>
+          <ul class="step-details">
+            <li>Component Development</li>
+            <li>State Management (Redux/Context)</li>
+            <li>API Integration & TypeScript</li>
+          </ul>
+          <div class="tech-stack">
+            <i class="fab fa-js" title="JavaScript"></i>
+            <i class="fab fa-php" title="PHP"></i>
+            <i class="fab fa-sass" title="SASS"></i>
+          </div>
+          <div class="step-metrics">
+            <span class="metric">🔥 98% Code Quality</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step" data-aos="fade-right" data-aos-delay="200">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Performance Optimization</h3>
+          <ul class="step-details">
+            <li>Lazy Loading & Code Splitting</li>
+            <li>SEO & Accessibility (WCAG)</li>
+            <li>Animation & Micro-interactions</li>
+          </ul>
+          <div class="tech-stack">
+            <i class="fas fa-tachometer-alt" title="Performance"></i>
+            <i class="fas fa-universal-access" title="Accessibility"></i>
+            <i class="fas fa-mobile-alt" title="Responsive"></i>
+          </div>
+          <div class="step-metrics">
+            <span class="metric">📊 96% Performance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3>Testing & Deployment</h3>
+          <ul class="step-details">
+            <li>Unit Testing (Jest/RTL)</li>
+            <li>CI/CD Pipeline Setup</li>
+            <li>Cloud Deployment & Monitoring</li>
+          </ul>
+          <div class="tech-stack">
+            <i class="fab fa-github" title="GitHub"></i>
+            <i class="fab fa-aws" title="AWS"></i>
+            <i class="fas fa-code-branch" title="Version Control"></i>
+          </div>
+          <div class="step-metrics">
+            <span class="metric">🎯 99% Deployment Win</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Add more cards -->
+
+  <!-- Work Experience -->
+  <section id="experience" class="experience">
+    <div id="particles-js-work"></div>
+    <h3 class="section-title centered" data-aos="fade-up">MY JOURNEY</h3>
+    <h2 class="experience-title" data-aos="fade-up">Work Experience</h2>
+
+    <div class="experience-cards">
+      <!-- Junior Developer Card (Oldest) -->
+      <div class="experience-card" data-aos="fade-right" data-aos-delay="200">
+          <div class="role-header">
+          <div class="role-info">
+            <div class="role-title">
+              <h3>Junior Web Developer</h3>
+              <span class="company">Digital Solutions Agency</span>
+            </div>
+            </div>
+            <div class="role-meta">
+            <span class="duration">2019 - 2021</span>
+            <span class="location"><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</span>
+            </div>
+          </div>
+
+        <div class="card-content">
+          <div class="responsibilities">
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>
+                Built responsive websites and landing pages using HTML, CSS, and JavaScript
+              </li>
+              <li>Collaborated with designers to implement UI/UX improvements</li>
+              <li>Maintained and updated existing client websites</li>
+            </ul>
+          </div>
+
+          <div class="achievements">
+            <h4>Key Achievements</h4>
+            <div class="metrics-container">
+              <div class="metric-item">
+                <span class="metric-number">25+</span>
+                <span class="metric-text">Projects Completed</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">90%</span>
+                <span class="metric-text">Client Satisfaction</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-stack">
+            <h4>Technologies Used</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">jQuery</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend Developer Card (Middle) -->
+      <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="role-header">
+          <div class="role-info">
+            <div class="role-title">
+              <h3>Frontend Developer</h3>
+              <span class="company">InnovateTech Labs</span>
+            </div>
+            </div>
+            <div class="role-meta">
+            <span class="duration">2021 - 2023</span>
+              <span class="location"><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</span>
+            </div>
+          </div>
+
+        <div class="card-content">
+          <div class="responsibilities">
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>
+                Developed responsive UI components using Angular and SCSS
+              </li>
+              <li>Implemented state management solutions using NgRx</li>
+              <li>Integrated RESTful APIs and GraphQL endpoints</li>
+            </ul>
+          </div>
+
+          <div class="featured-project">
+              <h5>E-Commerce Platform Redesign</h5>
+              <p>
+                Led the frontend development of a modern e-commerce platform
+                serving 100k+ monthly users.
+              </p>
+              <div class="project-metrics">
+              <span class="metric">🔥 35% Higher Conversion</span>
+                <span class="metric">⚡ 50% Faster Loading</span>
+            </div>
+          </div>
+
+          <div class="tech-stack">
+            <h4>Technologies Used</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">SCSS</span>
+              <span class="tech-tag">NgRx</span>
+              <span class="tech-tag">GraphQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Senior Frontend Developer Card (Newest) -->
+      <div class="experience-card" data-aos="fade-left">
+        <div class="role-header">
+          <div class="role-info">
+            <div class="role-title">
+              <h3>Senior Frontend Developer</h3>
+              <span class="company">TechCorp Solutions</span>
+            </div>
+          </div>
+          <div class="role-meta">
+            <span class="duration">2023 - Present</span>
+            <span class="location"><i class="fas fa-map-marker-alt"></i> Remote</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="responsibilities">
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>
+                Architected and developed scalable web applications using
+                React and Next.js
+              </li>
+              <li>
+                Led implementation of component-based design system using
+                Tailwind CSS
+              </li>
+              <li>
+                Optimized application performance achieving 40% faster load
+                times
+              </li>
+            </ul>
+          </div>
+
+          <div class="achievements">
+            <h4>Key Achievements</h4>
+            <div class="metrics-container">
+              <div class="metric-item">
+                <span class="metric-number">40%</span>
+                <span class="metric-text">Performance Boost</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">30%</span>
+                <span class="metric-text">User Engagement</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">95%</span>
+                <span class="metric-text">Accessibility Score</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-stack">
+            <h4>Technologies Used</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Tailwind</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="projects-header" data-aos="fade-up">
+      <h3 class="section-title">MY WORK</h3>
+      <h2 class="projects-title">My Projects</h2>
+      <p class="projects-description">
+        Showcasing my expertise in front-end development through real-world
+        applications. Each project demonstrates my commitment to clean code,
+        optimal performance, and exceptional user experience.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Car Rental Platform -->
+      <div class="project-card" data-aos="fade-up">
+        <div class="project-image">
+          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Car Rental Platform" loading="lazy"
+            decoding="async" />
+          <div class="project-links">
+            <a href="https://car-rent.vercel.app" target="_blank" class="demo-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Balogram-dev" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Car Rental Platform</h3>
+            <span class="project-type">Client Project</span>
+          </div>
+
+          <p class="project-description">
+            Modern car rental platform with real-time availability, seamless
+            booking flow, and interactive UI. Features include dynamic search,
+            filtering, and secure payment integration.
+          </p>
+
+          <div class="project-features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i> Real-time search with instant
+                filtering
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Interactive booking calendar
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Responsive design with animations
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-metrics">
+            <div class="project-metric">
+              <span class="metric-number">40%</span>
+              <span class="metric-label">Faster Loading</span>
+            </div>
+            <div class="metric">
+              <span class="metric-number">95</span>
+              <span class="metric-label">Lighthouse Score</span>
+            </div>
+          </div>
+
+          <div class="project-tech">
+            <h4>Technologies Used</h4>
+            <div class="tech-tags">
+              <span class="tech-tag" data-tech="react"><i class="fab fa-react"></i> React</span>
+              <span class="tech-tag" data-tech="typescript"><i class="fab fa-js"></i> TypeScript</span>
+              <span class="tech-tag" data-tech="tailwind"><i class="fab fa-css3"></i> Tailwind</span>
+              <span class="tech-tag" data-tech="firebase"><i class="fas fa-server"></i> Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-Commerce Dashboard -->
+      <div class="project-card" data-aos="fade-up">
+        <div class="project-image">
+          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Car Rental Platform" loading="lazy"
+            decoding="async" /> 
+          <div class="project-links">
+            <a href="https://dashboard-demo.vercel.app" target="_blank" class="demo-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Balogram-dev" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">E-Commerce Dashboard</h3>
+            <span class="project-type">Personal Project</span>
+          </div>
+
+          <p class="project-description">
+            Advanced analytics dashboard for e-commerce platforms featuring
+            real-time data visualization, inventory management, and sales
+            tracking with predictive analytics.
+          </p>
+
+          <div class="project-features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i> Real-time analytics dashboard
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Advanced data visualization
+              </li>
+              <li><i class="fas fa-check"></i> Dark/Light theme support</li>
+            </ul>
+          </div>
+
+          <div class="project-metrics">
+            <div class="project-metric">
+              <span class="metric-number">60%</span>
+              <span class="metric-label">Performance Boost</span>
+            </div>
+            <div class="metric">
+              <span class="metric-number">98</span>
+              <span class="metric-label">Lighthouse Score</span>
+            </div>
+          </div>
+
+          <div class="project-tech">
+            <h4>Technologies Used</h4>
+            <div class="tech-tags">
+              <span class="tech-tag" data-tech="next"><i class="fab fa-react"></i> Next.js</span>
+              <span class="tech-tag" data-tech="typescript"><i class="fab fa-js"></i> TypeScript</span>
+              <span class="tech-tag" data-tech="chakra"><i class="fas fa-paint-brush"></i> Chakra UI</span>
+              <span class="tech-tag" data-tech="graphql"><i class="fas fa-project-diagram"></i> GraphQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Platform -->
+      <div class="project-card" data-aos="fade-up">
+        <div class="project-image">
+          <img src="./Image/Project-Image/Screenshot 2025-03-04 130712.png" alt="Car Rental Platform" loading="lazy"
+            decoding="async" />
+          <div class="project-links">
+            <a href="https://social-demo.vercel.app" target="_blank" class="demo-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Balogram-dev" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Social Connect</h3>
+            <span class="project-type">Freelance Project</span>
+          </div>
+
+          <p class="project-description">
+            Modern social media platform with real-time messaging, post
+            sharing, and interactive user profiles. Features include live
+            notifications and media sharing.
+          </p>
+
+          <div class="project-features">
+            <h4>Key Features</h4>
+            <ul>
+              <li><i class="fas fa-check"></i> Real-time messaging</li>
+              <li><i class="fas fa-check"></i> Live notifications</li>
+              <li><i class="fas fa-check"></i> Media sharing & stories</li>
+            </ul>
+          </div>
+
+          <div class="project-metrics">
+            <div class="project-metric">
+              <span class="metric-number">45%</span>
+              <span class="metric-label">User Engagement</span>
+            </div>
+            <div class="metric">
+              <span class="metric-number">96</span>
+              <span class="metric-label">Lighthouse Score</span>
+            </div>
+          </div>
+
+          <div class="project-tech">
+            <h4>Technologies Used</h4>
+            <div class="tech-tags">
+              <span class="tech-tag" data-tech="vue"><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span class="tech-tag" data-tech="typescript"><i class="fab fa-js"></i> TypeScript</span>
+              <span class="tech-tag" data-tech="tailwind"><i class="fab fa-css3"></i> Tailwind</span>
+              <span class="tech-tag" data-tech="supabase"><i class="fas fa-database"></i> Supabase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-cta" data-aos="fade-up">
+      <a href="https://github.com/Balogram-dev" target="_blank" class="cta-button">
+        <i class="fab fa-github"></i> View More Projects
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="testimonials-header" data-aos="fade-up">
+      <h3 class="section-title">WHAT OTHERS SAY</h3>
+      <h2 class="testimonials-title">Client Testimonials</h2>
+      <p class="testimonials-description">
+        Feedback from clients I've had the pleasure of working with on various
+        projects
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Tech Lead Testimonial -->
+      <div class="testimonial-card" data-aos="fade-up">
+        <div class="testimonial-content">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "Babatunde's expertise in React and attention to performance
+            optimization resulted in a 40% improvement in our application's
+            load time. His commitment to clean code and best practices made
+            him an invaluable asset to our team."
+          </p>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="testimonial-author">
+          <img src="./Image/Testimonies-images/images (2).jpg" alt="David Chen" class="author-image" />
+          <div class="author-info">
+            <h4 class="author-name">David Chen</h4>
+            <p class="author-role">Tech Lead at TechCorp</p>
+            <div class="author-social">
+              <a href="https://linkedin.com/in/davidchen" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Startup Founder Testimonial -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-content">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "Working with Babatunde was a game-changer for our startup. His
+            innovative solutions and user-centric approach helped us achieve a
+            50% increase in user engagement. The UI/UX improvements were
+            exactly what we needed."
+          </p>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="testimonial-author">
+          <img src="./Image/Testimonies-images/images (2).jpg" alt="David Chen" class="author-image" />
+          <div class="author-info">
+            <h4 class="author-name">Sarah Martinez</h4>
+            <p class="author-role">Founder at InnovateTech</p>
+            <div class="author-social">
+              <a href="https://twitter.com/sarahm" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Manager Testimonial -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-content">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "Exceptional problem-solving skills and great communication.
+            Babatunde delivered our e-commerce platform ahead of schedule and
+            exceeded our performance expectations. The codebase is clean and
+            well-documented."
+          </p>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="testimonial-author">
+          <img src="./image/Testimonies-images/images.jpg" alt="Michael Johnson" class="author-image" />
+          <div class="author-info">
+            <h4 class="author-name">Michael Johnson</h4>
+            <p class="author-role">Project Manager at WebSolutions</p>
+            <div class="author-social">
+              <a href="https://github.com/michaelj" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-cta" data-aos="fade-up">
+      <a href="#contact" class="cta-button">
+        <i class="fas fa-paper-plane"></i> Work With Me
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="earth-model">
+      <div id="container3D"></div>
+    </div>
+    <div class="contact-form-container">
+      <h3 class="section-title">GET IN TOUCH</h3>
+      <h2>Contact</h2>
+      <form id="contact-form" data-aos="fade-up">
+        <input type="text" placeholder="Your name?" required />
+        <input type="email" placeholder="Your email?" required />
+        <textarea placeholder="Type message here" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div id="particles-js-footer"></div>
+    
+    <!-- Main Footer Content -->
+    <div class="footer-wrapper">
+    <div class="footer-content">
+        <!-- Brand Column -->
+        <div class="footer-column footer-brand">
+        <a href="#" class="logo">
+          <h2>Balogram</h2>
+            <span><h4>Code & canvas</h4></span>
+        </a>
+          <p class="brand-description">
+          Innovating the digital space with cutting-edge solutions. Crafting
+            seamless experiences that ignite innovation and fuel growth.
+          </p>
+          
+          <!-- Social links for larger screens -->
+          <div class="social-links-desktop">
+            <a href="https://github.com/Balogram-dev" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/babatunde-agboke/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.behance.net/ballogramdesign" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <a href="https://x.com/TundeAgboke1" target="_blank" aria-label="X"><i class="fab fa-x"></i></a>
+            <a href="https://www.instagram.com/ux.balogram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-column footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#process">My Process</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Column -->
+        <div class="footer-column footer-contact">
+          <h3>Contact Info</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div class="contact-text">
+          <p>tunde.agboke@gmail.com</p>
+          <p>tunde.agboke@yahoo.com</p>
+              </div>
+        </div>
+
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <div class="contact-text">
+          <p>+234 814 095 6485</p>
+          <p>+234 903 8373 145</p>
+              </div>
+        </div>
+
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="contact-text">
+          <p>12 Emmanuel College Alagbado</p>
+          <p>Lagos, Nigeria</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <!-- Social links for mobile -->
+      <div class="social-links">
+        <a href="https://github.com/Balogram-dev" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/babatunde-agboke/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.behance.net/ballogramdesign" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        <a href="https://x.com/TundeAgboke1" target="_blank" aria-label="X"><i class="fab fa-x"></i></a>
+        <a href="https://www.instagram.com/ux.balogram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@balogram_techtalk" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@balogram_tech_talk" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>© 2025 Balogram Code & Canvas. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="hero.js"></script>
+  <script type="module" src="3d-model.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

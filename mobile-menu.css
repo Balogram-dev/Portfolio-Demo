@@ -1,0 +1,129 @@
+/* Mobile Menu CSS - Critical Fixes */
+
+/* Desktop menu styles */
+@media (min-width: 769px) {
+  /* Always show navigation menu on desktop */
+  .nav-links {
+    display: flex !important;
+    position: static;
+    background: transparent;
+    flex-direction: row;
+    padding: 0;
+    height: auto;
+  }
+  
+  /* Hide menu button on desktop */
+  .menu-btn {
+    display: none !important;
+  }
+  
+  /* Ensure nav-link is horizontal on desktop */
+  .nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  
+  /* Reset any mobile-specific styles for links */
+  .nav-links .nav-link a {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Ensure download-cv button appears correctly */
+  .nav-links .download-cv {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* Force correct display modes for mobile */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex !important;
+    cursor: pointer;
+    z-index: 1010;
+  }
+  
+  .nav-links {
+    display: none !important;
+  }
+  
+  .nav-links.active {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background: rgba(15, 14, 23, 0.98);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem 2rem;
+  }
+  
+  .nav-links.active .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .nav-links.active .nav-link a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .nav-links.active .download-cv {
+    margin-top: 0.5rem;
+    width: min(80%, 250px);
+    padding: 1.2rem;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 8px 20px rgba(43, 22, 119, 0.25);
+  }
+  
+  /* Text color changes for better readability */
+  .nav-links.active .nav-link a::after {
+    background: var(--text-gray);
+  }
+  
+  /* Active link indicator */
+  .nav-links.active .nav-link a.active {
+    color: var(--text-gray);
+  }
+  
+  .nav-links.active .nav-link a:hover::after,
+  .nav-links.active .nav-link a.active::after {
+    background: var(--text-gray);
+  }
+  
+  /* Button styling moved to button-fix.css */
+}
+
+/* Fix any media queries */
+@media (max-width: 480px) {
+  .nav-links.active .nav-link a {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    min-width: 180px;
+  }
+}

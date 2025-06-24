@@ -1,0 +1,19 @@
+/* Image opacity and contrast adjustments */
+
+/* Desktop view - reduced opacity */
+.code-snap-image {
+  opacity: 0.4 !important; /* Lower opacity for desktop view */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.code-snap-image:hover {
+  opacity: 0.8 !important; /* Increase opacity on hover */
+}
+
+/* Mobile view - full opacity */
+@media screen and (max-width: 768px) {
+  .code-snap-image {
+    opacity: 1 !important; /* Full opacity on mobile */
+    filter: brightness(1.1) contrast(1.1);
+  }
+} 

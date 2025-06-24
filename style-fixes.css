@@ -1,0 +1,881 @@
+/* iOS mobile fixes */
+:root {
+  --vh: 1vh;
+}
+
+/* Spacing adjustments between sections */
+
+/* Reduce spacing between hero and overview sections */
+section#overview {
+  padding-top: 1rem;
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  section#overview {
+    padding-top: 0.5rem;
+  }
+  
+  /* Ensure high-quality rendering on mobile */
+  .hero * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Eliminate transform perspective on mobile */
+  .code-snap-image {
+    transform: none !important;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Eliminate all backdrop filters on mobile for better performance */
+  [style*="backdrop-filter"],
+  .cta-secondary,
+  .stat-item,
+  .card,
+  .project-card,
+  .modal-content,
+  .search-modal,
+  .contact-form,
+  .navbar,
+  .dropdown-content,
+  .tooltip {
+    backdrop-filter: none !important;
+  }
+  
+  /* Sharpen text elements */
+  .glitch-text, 
+  .section-title, 
+  .typed-text, 
+  .stat-number {
+    transform: translateZ(0);
+  }
+  
+  /* Increase opacity and contrast for better visibility */
+  .code-snap-image,
+  .hero-bg-image,
+  .hero-background,
+  img[style*="opacity"] {
+    opacity: 1 !important;
+    filter: brightness(1.1) contrast(1.1);
+  }
+  
+  /* Force hardware acceleration for smoother rendering */
+  body {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    backface-visibility: hidden;
+    perspective: 1000;
+  }
+  
+  /* Optimize images for mobile devices */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Reduce visual effects that can cause blurriness */
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Enable 3D acceleration for all elements in the hero section */
+  .hero,
+  .hero * {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Larger text for project cards on mobile */
+  .project-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+  }
+  
+  .project-description {
+    font-size: 1rem !important;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+  
+  .project-features li {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-type {
+    font-size: 0.9rem !important;
+  }
+  
+  .tech-tag {
+    font-size: 0.9rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+  
+  .project-metrics .metric {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Make buttons more touch-friendly */
+  .demo-link, 
+  .github-link {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+    border-radius: 30px !important;
+  }
+  
+  .project-links {
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+  }
+  
+  /* Add more whitespace around card content */
+  .project-content {
+    padding: 1.5rem !important;
+  }
+  
+  /* Improve spacing between elements */
+  .project-header {
+    margin-bottom: 1rem !important;
+  }
+  
+  .tech-tags {
+    margin-top: 1.2rem !important;
+    gap: 0.7rem !important;
+  }
+  
+  /* Enhanced mobile menu button */
+  .menu-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(108, 99, 255, 0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .menu-btn:hover {
+    background: rgba(108, 99, 255, 0.25);
+  }
+  
+  .menu-btn span {
+    height: 2px;
+    width: 22px;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+  }
+  
+  /* Animated menu button */
+  .menu-btn.active {
+    background: var(--text-gray) !important;
+  }
+  
+  .menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Improved mobile navigation menu */
+  .nav-links.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 14, 23, 0.98);
+    z-index: 1000;
+    overflow-y: auto;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  
+  /* Hide scrollbar for Webkit browsers */
+  .nav-links.active::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Scroll indicator */
+  .nav-links.active::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    animation: pulse 2s infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.6; }
+    100% { opacity: 0.2; }
+  }
+  
+  /* Menu button on top */
+  .menu-btn {
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgba(108, 99, 255, 0.2);
+  }
+  
+  /* Prevent body scrolling when menu is open */
+  body.no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Add active link indicator */
+  .nav-link a.active {
+    color: var(--primary-color);
+  }
+  
+  .nav-links.active .nav-link a.active::after {
+    width: 30%;
+  }
+  
+  /* Make mobile navbar more compact and accessible */
+  .navbar {
+    padding: 0.8rem 1.2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .navbar .logo h2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar .logo span h4 {
+    font-size: 0.75rem;
+    opacity: 0.85;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Add transparent backdrop for menu */
+  .navbar::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar.menu-open::after {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Hide desktop navigation by default on mobile */
+  .nav-links {
+    display: none;
+  }
+  
+  /* Fix mobile menu positioning */
+  .nav-links.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 14, 23, 0.98);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 4rem 1.5rem 2rem;
+    animation: fadeIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  
+  /* Optimize menu for mobile views */
+  .nav-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Ensure menu is always above other content */
+  .menu-btn {
+    z-index: 1010;
+  }
+  
+  /* Fix any leftover desktop styles */
+  .navbar .nav-link {
+    margin-left: 0;
+  }
+  
+  /* Critical menu fixes */
+  .menu-btn {
+    display: flex !important;
+  }
+  
+  .nav-links:not(.active) {
+    display: none !important;
+  }
+  
+  .nav-links.active {
+    display: flex !important;
+    opacity: 1 !important;
+  }
+  
+  /* Mobile text color adjustments for better readability */
+  .section-title, 
+  .section-subtitle,
+  .glitch-text::after,
+  .stat-number,
+  .typed-text,
+  .nav-link a.active,
+  .nav-links.active .nav-link a:hover,
+  .nav-links.active .nav-link a.active {
+    color: var(--text-gray) !important;
+    -webkit-text-fill-color: var(--text-gray) !important;
+  }
+  
+  /* Update gradients that use primary-color */
+  .glitch-text::after,
+  .stat-number {
+    background: var(--text-gray) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+  
+  /* Fix underlines and borders */
+  .nav-links.active .nav-link a::after,
+  .section-title::before {
+    background: var(--text-gray) !important;
+  }
+  
+  /* Change download button background */
+  .nav-links.active .download-cv {
+    background: var(--text-gray) !important;
+    box-shadow: 0 8px 20px rgba(156, 163, 175, 0.25) !important;
+  }
+  
+  /* Additional text color adjustments */
+  .menu-btn.active {
+    background: var(--text-gray) !important;
+  }
+  
+  .process-step::before,
+  .testimonial-card::before,
+  .card::before,
+  .project-card::before {
+    background: linear-gradient(45deg, transparent, var(--text-gray), transparent) !important;
+  }
+  
+  /* Remove CTA styling from here - all button styling is now in button-fix.css */
+}
+
+@media screen and (max-width: 480px) {
+  section#overview {
+    padding-top: 0.25rem;
+  }
+  
+  /* Even larger text for smallest screens */
+  .project-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .project-description {
+    font-size: 1rem !important;
+  }
+  
+  .project-features li {
+    font-size: 1rem !important;
+    padding-left: 1.8rem;
+  }
+  
+  .project-features h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.95rem !important;
+    padding: 0.45rem 0.85rem !important;
+  }
+  
+  /* Full-width buttons with increased height for better touch targets */
+  .demo-link, 
+  .github-link {
+    padding: 1rem 1.5rem !important;
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 1.05rem !important;
+  }
+  
+  .project-links {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 1rem !important;
+  }
+  
+  /* More breathing room */
+  .project-content {
+    padding: 1.8rem 1.6rem !important;
+  }
+  
+  .nav-links.active .nav-link a {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .nav-links.active .download-cv {
+    padding: 0.9rem 1.4rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Smaller devices adjustments */
+  .navbar {
+    padding: 0.7rem 1rem;
+    height: 55px;
+  }
+  
+  .navbar .logo h2 {
+    font-size: 1.2rem;
+  }
+  
+  .menu-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .nav-links.active .nav-link a {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    min-width: 180px;
+  }
+  
+  .nav-links.active .download-cv {
+    padding: 1rem 1.5rem;
+    margin-top: 0;
+  }
+  
+  /* Additional adjustments for smaller screens */
+  .hero-subtitle,
+  .overview-text,
+  .process-description,
+  .project-description,
+  .testimonial-text,
+  .stat-label {
+    color: var(--text-gray) !important;
+    opacity: 1 !important;
+  }
+  
+  /* More visible active indicators */
+  .nav-links.active .nav-link a::after {
+    height: 3px !important;
+  }
+  
+  .nav-links.active .nav-link a:hover::after,
+  .nav-links.active .nav-link a.active::after {
+    width: 50% !important;
+  }
+}
+
+/* Extra small devices adjustments */
+@media screen and (max-width: 360px) {
+  .navbar .logo h2 {
+    font-size: 1.1rem;
+  }
+  
+  .navbar .logo span h4 {
+    font-size: 0.7rem;
+  }
+  
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .menu-btn span {
+    width: 18px;
+  }
+  
+  .nav-links.active .nav-link a {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    min-width: 160px;
+  }
+  
+  .nav-links.active .download-cv {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.2rem;
+  }
+}
+
+/* Mobile Navigation Complete Fix */
+
+/* Base styles for the navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  transition: all 0.3s ease;
+  background: rgba(15, 14, 23, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop navigation styles (to be overridden on mobile) */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile menu button always visible on mobile */
+.menu-btn {
+  display: none; /* Hidden on desktop by default */
+}
+
+/* Complete mobile navigation fix */
+@media screen and (max-width: 768px) {
+  /* Navbar container */
+  .navbar {
+    padding: 0.7rem 1.2rem;
+    height: 60px;
+  }
+  
+  /* Logo positioning */
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .navbar .logo h2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar .logo span h4 {
+    font-size: 0.75rem;
+    opacity: 0.85;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Make menu button visible on mobile */
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    gap: 5px;
+    border-radius: 50%;
+    background: rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    position: relative;
+    z-index: 1010; /* Above everything */
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  /* Menu button spans */
+  .menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+  }
+  
+  /* Menu button animation */
+  .menu-btn.active {
+    background: var(--text-gray) !important;
+  }
+  
+  .menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Hide desktop navigation by default on mobile */
+  .nav-links {
+    display: none !important; /* Use !important to override any other styles */
+    margin-right: 0;
+    gap: 0;
+  }
+  
+  /* Mobile menu - only visible when active */
+  .nav-links.active {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 14, 23, 0.98);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 4rem 1.5rem 2rem;
+    opacity: 0;
+    animation: fadeIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  
+  /* Mobile menu animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Mobile menu links container */
+  .nav-links.active .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+  }
+  
+  /* Mobile menu links */
+  .nav-links.active .nav-link a {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    width: auto;
+    min-width: 200px;
+    margin: 0;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: navLinkFadeIn 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  
+  /* Staggered animation for nav links */
+  .nav-links.active .nav-link a:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links.active .nav-link a:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links.active .nav-link a:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links.active .nav-link a:nth-child(4) { animation-delay: 0.4s; }
+  
+  @keyframes navLinkFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Active link indicator */
+  .nav-links.active .nav-link a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.6rem;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateX(-50%);
+  }
+  
+  .nav-links.active .nav-link a:hover::after,
+  .nav-links.active .nav-link a.active::after {
+    width: 40%;
+  }
+  
+  /* Download CV button */
+  .nav-links.active .download-cv {
+    margin-top: 0.5rem;
+    width: min(80%, 250px);
+    padding: 1.2rem;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.25);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: navLinkFadeIn 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0.5s;
+    border: none;
+  }
+  
+  .nav-links.active .download-cv::before {
+    content: "↓";
+    margin-right: 0.5rem;
+  }
+  
+  .nav-links.active .download-cv:active {
+    transform: translateY(3px);
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.2);
+  }
+  
+  /* Prevent body scrolling when menu is open */
+  body.no-scroll {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  
+  /* Add transparent backdrop for menu */
+  .navbar::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar.menu-open::after {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Extra small screen adjustments */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.7rem 1rem;
+    height: 55px;
+  }
+  
+  .navbar .logo h2 {
+    font-size: 1.2rem;
+  }
+  
+  .menu-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .nav-links.active .nav-link a {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    min-width: 180px;
+  }
+  
+  .nav-links.active .download-cv {
+    padding: 1rem 1.5rem;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 360px) {
+  .navbar .logo h2 {
+    font-size: 1.1rem;
+  }
+  
+  .navbar .logo span h4 {
+    font-size: 0.7rem;
+  }
+  
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .menu-btn span {
+    width: 18px;
+  }
+  
+  .nav-links.active .nav-link a {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    min-width: 160px;
+  }
+  
+  .nav-links.active .download-cv {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.2rem;
+  }
+}
+
+/* iOS mobile fixes */
+:root {
+  --vh: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+  /* Use the custom viewport height variable for iOS */
+  .nav-links.active {
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  
+  /* Fix iOS scrolling */
+  body.no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+} 
